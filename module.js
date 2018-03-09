@@ -1,0 +1,16 @@
+"use strict";
+exports.__esModule = true;
+var main_1 = require("./main");
+var main_2 = require("./main");
+var main_3 = require("./main");
+var obj1 = new main_1.Create();
+var obj2 = new main_2.Read();
+var obj3 = new main_3.Delete();
+var fecha = new Date("1995,15,10");
+obj1.addStudent("13400436", "daniel", "jimenez", 89, "masculino", fecha, true);
+obj1.addStudent("13400440", "jose", "ortiz", 90, "masculino", fecha, true);
+obj1.addStudent("13400441", "pedro", "rodriguez", 77, "masculino", fecha, false);
+obj2.readStudent();
+console.log("------Despues de borrar el registro con 13400440---------");
+obj3.deleteStudent("13400440");
+obj2.readStudent();
